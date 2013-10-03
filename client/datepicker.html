@@ -1,4 +1,9 @@
 <template name="datepicker">
-    <label for="{{name}}">{{label}}</label>
-    <input type="{{type}}" name="{{name}}" id="{{name}}"{{#if __first}} autocomplete="autocomplete"{{/if}} class="{{classn}}">
+    <label for="{{name}}">
+        {{label}}
+        {{#if hint}}
+            <i class="icon-question-sign fb_formhelp" data-hint="{{hint}}"></i>
+        {{/if}}
+    </label>
+    <input type="{{type}}" name="{{name}}" id="{{name}}"{{#if __first}} autocomplete="autocomplete"{{/if}} class="{{classn}}" value="{{value}}">
 </template>
